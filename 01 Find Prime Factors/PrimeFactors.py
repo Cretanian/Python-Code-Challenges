@@ -5,18 +5,18 @@ def isprime(num):
     return True
 
 
-def primefactors(num):
-    primefactor = []
-    primehelper = 2
+def get_prime_factors(num):
+    prime_factor = list()
+    prime_helper = 2
 
     while num != 1:
-        if num % primehelper == 0 & primehelper != 1:
-            primefactor.append(primehelper)
-            num = num / primehelper
+        if num % prime_helper == 0 & prime_helper != 1:
+            prime_factor.append(prime_helper)
+            num = num // prime_helper
         else:
-            primehelper += 1
+            prime_helper += 1
 
-    print(primefactor)
+    return prime_factor
 
 
 if __name__ == '__main__':
@@ -26,4 +26,4 @@ if __name__ == '__main__':
     if isprime(inputNumber):
         print(inputNumber)
     else:
-        primefactors(inputNumber)
+        get_prime_factors(inputNumber)
