@@ -1,3 +1,4 @@
+#!/usr/bin/python
 
 def check_for_palindrome(str):
     tail = len(str) - 1
@@ -13,5 +14,6 @@ def check_for_palindrome(str):
 if __name__ == '__main__':
     print('Enter your string:')
     str_input = input()
+    # removing special characters
     str_input = ''.join(e for e in str_input if e.isalnum())
     print(check_for_palindrome(str_input.lower()))
